@@ -12,14 +12,17 @@ public class Deck {
     public int nextToDeal;
 
 
+
     /**
      * Constructor, initializes the deck
      */
     public Deck(){
         contents = new ArrayList(DEFAULT_DECK_SIZE); //makes empty list of n elements
         nextToDeal = 0;
+        proj3.Card nextCard;
         for (int rank : RANKS){
             for (String suit : SUITS){
+
 
             }
         }
@@ -59,5 +62,7 @@ public class Deck {
 
     }
 
-
+/**keep track of cards dealt
+ * gather method, set nextTo equal to 0
+ */
 }
