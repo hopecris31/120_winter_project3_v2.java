@@ -11,8 +11,7 @@ public class Deck {
     public final int[] RANKS = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
     public final String[] SUITS = {"Spades", "Hearts", "Diamonds", "Clubs"};
     public int nextToDeal;
-    public boolean isEmpty;
-    public proj3.Card dealtCard;
+    public Card dealtCard;
 
 
 
@@ -22,7 +21,7 @@ public class Deck {
     public Deck(){
         contents = new ArrayList(DEFAULT_DECK_SIZE); //makes empty list of n elements
         nextToDeal = 0;
-        proj3.Card card;
+        Card card;
         for (int rank : RANKS){
             for (String suit : SUITS){
                 card = new proj3.Card(rank, suit);
@@ -36,8 +35,16 @@ public class Deck {
     /**
      * for each index in the deck
      *swap with another random index
+     *
+     * range of for loop
+     * starting pos is nexttodeal
+     * final is length of array -1
      */
     public void shuffle(){
+        for(int i=nextToDeal; i <= contents.size(); i++) {
+
+
+        }
 
     }
 
@@ -67,10 +74,10 @@ public class Deck {
      * add one to nextToDeal
      * nextToDeal has to be in the range of the deck size
      *
-     * start at next to deal index, pick random number fron mext to deal to the end of the deck,
+     * start at next to deal index, pick random number fron mext to deal to the end of the deck
      *
      */
-    public proj3.Card deal() {
+    public Card deal() {
         if (isEmpty == true){ //this goes into its own method
             return null;}
         else{
