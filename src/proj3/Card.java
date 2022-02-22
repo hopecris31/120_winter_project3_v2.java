@@ -19,11 +19,11 @@ public class Card {
     }
 
 
-    public getRank(){
+    public int getRank(){
         return cardRank;
     }
 
-    public getSuit(){
+    public String getSuit(){
         return cardSuit;
     }
 

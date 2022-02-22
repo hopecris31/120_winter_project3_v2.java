@@ -78,7 +78,7 @@ public class Deck {
      *
      */
     public Card deal() {
-        if (isEmpty == true){ //this goes into its own method
+        if (isEmpty == true){
             return null;}
         else{
             dealtCard = contents.get(nextToDeal);
@@ -93,4 +93,3 @@ public class Deck {
 /**keep track of cards dealt
  * gather method, set nextTo equal to 0
  */
-}
