@@ -22,7 +22,8 @@ public class Deck {
         proj3.Card nextCard;
         for (int rank : RANKS){
             for (String suit : SUITS){
-
+                card = new proj3.Card(rank, suit);
+                contents.add(card);
 
             }
         }
