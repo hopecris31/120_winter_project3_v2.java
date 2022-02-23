@@ -14,9 +14,6 @@ public class PokerHand { //how to set up constructor as instructed
      */
     public PokerHand (ArrayList<Card> cardList){
         handContents = new ArrayList<Card>(cardList.size()); //empty to potentially contain however many cards
-
-
-
     }
 
 
@@ -43,6 +40,21 @@ public class PokerHand { //how to set up constructor as instructed
 
     }
 
+
+    /**
+     *
+     * @param otherHand, other hand that is being compared
+     * @return a negative number if self is worth LESS than otherHand,
+     *          zero if they are worth the SAME (a tie), and a positive number if
+     *          self is worth MORE than otherHand
+     */
+    public int compareTo(Card otherHand){
+
+    }
+
+    /**
+     * prints the hand as a string
+     */
     public String toString(){
         String handPrint = new String();
         for(int i=0; i<= (handContents.size() - 1); i++){
