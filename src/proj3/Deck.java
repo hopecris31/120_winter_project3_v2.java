@@ -2,7 +2,7 @@ package proj3; // do not erase. Gradescope expects this.
 
 import java.security.KeyStore;
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Collections;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Deck {
@@ -30,7 +30,6 @@ public class Deck {
 
             }
         }
-
     }
 
     /**
@@ -44,6 +43,8 @@ public class Deck {
     public void shuffle(){ //random number within undealt range, collections.swap(deck, i(nexttodeal), end+nexttodeal)
         for(int i=nextToDeal; i <= contents.size()-1; i++) {
             int randomIndex = ThreadLocalRandom.current().nextInt((contents.size() - nextToDeal));
+            randomIndex += nextToDeal;
+            Collections.swap(contents, i,  randomIndex);
 
 
         }
