@@ -49,11 +49,15 @@ public class PokerHand { //how to set up constructor as instructed
         String firstSuit = handContents.get(0).getSuit();
 
         for(Card card : handContents){
-            if(firstSuit != card.getSuit()){
+            if(firstSuit.equals(card.getSuit())){
                 return false;
             }
         }
         return true;
+    }
+
+    private boolean checkPair(){
+
     }
 
     /**
