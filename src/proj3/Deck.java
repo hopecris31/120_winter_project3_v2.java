@@ -41,9 +41,9 @@ public class Deck {
      * starting pos is nexttodeal
      * final is length of array -1
      */
-    public void shuffle(){
+    public void shuffle(){ //random number within undealt range, collections.swap(deck, i(nexttodeal), end+nexttodeal)
         for(int i=nextToDeal; i <= contents.size()-1; i++) {
-            int randomIndex = ThreadLocalRandom.current();
+            int randomIndex = ThreadLocalRandom.current().nextInt((contents.size() - nextToDeal));
 
 
         }
