@@ -13,7 +13,8 @@ public class PokerHand { //how to set up constructor as instructed
      * @param cardList
      */
     public PokerHand (ArrayList<Card> cardList){
-        handContents = new ArrayList<Card>(cardList.size()); //empty to potentially contain however many cards
+        handContents = (ArrayList<Card>) cardList.clone(); //empty to potentially contain however many cards
+
     }
 
 
@@ -27,7 +28,10 @@ public class PokerHand { //how to set up constructor as instructed
      * @param card, a card object
      * @return
      */
-    public Card addCard(Card card){
+    public void addCard(Card card){
+        if (handContents.size() < 5){
+            handContents.add(card);
+        }
     }
 
     /**
