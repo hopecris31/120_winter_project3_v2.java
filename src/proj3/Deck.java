@@ -45,8 +45,6 @@ public class Deck {
             int randomIndex = ThreadLocalRandom.current().nextInt((contents.size() - nextToDeal));
             randomIndex += nextToDeal;
             Collections.swap(contents, i,  randomIndex);
-
-
         }
 
     }
@@ -68,6 +66,11 @@ public class Deck {
     }
 
     public String toString(){
+        String deckPrint = new String();
+        for(int i=nextTodeal, i<= (contents.seze() - 1); i ++1){
+            deckPrint += (contents.get(i)).toString() + "\n";
+        }
+        return deckPrint;
     }
 
     /**
