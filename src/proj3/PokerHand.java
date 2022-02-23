@@ -40,21 +40,35 @@ public class PokerHand { //how to set up constructor as instructed
      * @param index the index of which card you want returned
      * @return Card at specified index
      */
-    public int getIthCard(int index){
-
+    public Card get_ith_card(int index){
+        return handContents.get(index);
     }
 
+
+    private boolean checkFlush(){
+        String firstSuit = handContents.get(0).getSuit();
+
+        for(Card card : handContents){
+            if(firstSuit != card.getSuit()){
+                return false;
+            }
+        }
+        return true;
+    }
 
     /**
+     * Determines how this hand compares to another hand, returns
+     * positive, negative, or zero depending on the comparison.
      *
-     * @param otherHand, other hand that is being compared
-     * @return a negative number if self is worth LESS than otherHand,
-     *          zero if they are worth the SAME (a tie), and a positive number if
-     *          self is worth MORE than otherHand
+     * @param other The hand to compare this hand to
+     * @return a negative number if this is worth LESS than other, zero
+     * if they are worth the SAME, and a positive number if this is worth
+     * MORE than other
      */
-    public int compareTo(Card otherHand){
+    public int compareTo(PokerHand other){
 
     }
+
 
     /**
      * prints the hand as a string
