@@ -1,13 +1,12 @@
 package proj3; // do not erase. Gradescope expects this.
 
-import java.security.KeyStore;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Deck {
 
-    private ArrayList contents;
+    public ArrayList<Card> contents;
     public final int DEFAULT_DECK_SIZE = 52;
     public final int[] RANKS = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
     public final String[] SUITS = {"Spades", "Hearts", "Diamonds", "Clubs"};
@@ -20,7 +19,7 @@ public class Deck {
      * Constructor, initializes the deck
      */
     public Deck(){
-        contents = new ArrayList(DEFAULT_DECK_SIZE); //makes empty list of n elements
+        contents = new ArrayList<Card>(DEFAULT_DECK_SIZE); //makes empty list of n elements
         nextToDeal = 0;
         Card card;
         for (int rank : RANKS){
@@ -40,7 +39,7 @@ public class Deck {
      * starting pos is nexttodeal
      * final is length of array -1
      */
-    public void shuffle(){ //random number within undealt range, collections.swap(deck, i(nexttodeal), end+nexttodeal)
+    public void shuffle(){
         for(int i=nextToDeal; i <= contents.size()-1; i++) {
             int randomIndex = ThreadLocalRandom.current().nextInt((contents.size() - nextToDeal));
             randomIndex += nextToDeal;
@@ -58,7 +57,6 @@ public class Deck {
 
     public int size(){
         return contents.size() - nextToDeal;
-
     }
 
     public int gather(){
@@ -67,7 +65,7 @@ public class Deck {
 
     public String toString(){
         String deckPrint = new String();
-        for(int i=nextTodeal, i<= (contents.seze() - 1); i ++1){
+        for(int i=nextToDeal; i<= (contents.size() - 1); i++){
             deckPrint += (contents.get(i)).toString() + "\n";
         }
         return deckPrint;
@@ -84,7 +82,7 @@ public class Deck {
      *
      */
     public Card deal() {
-        if (isEmpty == true){
+        if (isEmpty() == true){
             return null;}
         else{
             dealtCard = contents.get(nextToDeal);
