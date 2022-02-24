@@ -45,7 +45,7 @@ public class PokerHand { //how to set up constructor as instructed
     }
 
 
-    private boolean checkFlush(){
+    private boolean isFlush(){
         String firstSuit = handContents.get(0).getSuit();
 
         for(Card card : handContents){
@@ -56,8 +56,14 @@ public class PokerHand { //how to set up constructor as instructed
         return true;
     }
 
-    private boolean checkPair(){
+    private ArrayList<Integer> getHandRanks(){
+        ArrayList<Integer> handRanks = new ArrayList<Integer>();
 
+
+    }
+
+    private boolean isPair(){
+        int
     }
 
     /**
