@@ -56,9 +56,14 @@ public class PokerHand { //how to set up constructor as instructed
         return true;
     }
 
-    private ArrayList<Integer> getHandRanks(){
+    private ArrayList<Card> getHandRanks(){
+
         ArrayList<Integer> handRanks = new ArrayList<Integer>();
 
+        for(Card card : handContents){
+            int rank = card.getRank();
+            handRanks.add(rank);
+        }
 
     }
 
