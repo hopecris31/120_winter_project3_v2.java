@@ -24,7 +24,7 @@ public class Deck {
         Card card;
         for (int rank : RANKS){
             for (String suit : SUITS){
-                card = new proj3.Card(rank, suit);
+                card = new Card(rank, suit);
                 contents.add(card);
 
             }
@@ -39,7 +39,7 @@ public class Deck {
      * starting pos is nexttodeal
      * final is length of array -1
      */
-    public void shuffle(){
+    public void shuffle(){ //test on full, partial, and empty deck
         for(int i=nextToDeal; i <= contents.size()-1; i++) {
             int randomIndex = ThreadLocalRandom.current().nextInt((contents.size() - nextToDeal));
             randomIndex += nextToDeal;

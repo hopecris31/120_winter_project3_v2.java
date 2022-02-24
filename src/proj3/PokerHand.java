@@ -70,7 +70,7 @@ public class PokerHand { //how to set up constructor as instructed
     private boolean isPair(){
         ArrayList<Integer> ranks = getHandRanks();
         for(int i = 0; i < handContents.size(); i++){
-
+            for( Card card : handContents.size())
         }
     }
 
