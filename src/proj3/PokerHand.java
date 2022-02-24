@@ -56,10 +56,9 @@ public class PokerHand { //how to set up constructor as instructed
         return true;
     }
 
+
     private ArrayList<Integer> getHandRanks(){
-
         ArrayList<Integer> handRanks = new ArrayList<Integer>();
-
         for(Card card : handContents){
             int rank = card.getRank();
             handRanks.add(rank);
@@ -67,8 +66,12 @@ public class PokerHand { //how to set up constructor as instructed
         return handRanks;
     }
 
+
     private boolean isPair(){
-        int
+        ArrayList<Integer> ranks = getHandRanks();
+        for(int i = 0; i < handContents.size(); i++){
+
+        }
     }
 
     /**
